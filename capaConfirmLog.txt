@@ -1,0 +1,50 @@
+eijitoriki@DESKTOP-A92C29I:~$ df -h
+Filesystem                                Size  Used Avail Use% Mounted on
+/dev/sdb                                  251G  2.6G  236G   2% /
+tmpfs                                     1.5G     0  1.5G   0% /mnt/wsl
+tools                                     461G  237G  224G  52% /init
+none                                      1.5G     0  1.5G   0% /dev
+none                                      1.5G  8.0K  1.5G   1% /run
+none                                      1.5G     0  1.5G   0% /run/lock
+none                                      1.5G     0  1.5G   0% /run/shm
+none                                      1.5G     0  1.5G   0% /run/user
+tmpfs                                     1.5G     0  1.5G   0% /sys/fs/cgroup
+drivers                                   461G  237G  224G  52% /usr/lib/wsl/drivers
+lib                                       461G  237G  224G  52% /usr/lib/wsl/lib
+C:\                                       461G  237G  224G  52% /mnt/c
+/dev/sdd                                  251G   36G  203G  15% /mnt/wsl/docker-desktop-data/isocache
+none                                      1.5G   16K  1.5G   1% /mnt/wsl/docker-desktop/shared-sockets/host-services
+/dev/sdc                                  251G  120M  239G   1% /mnt/wsl/docker-desktop/docker-desktop-user-distro
+/dev/loop0                                453M  453M     0 100% /mnt/wsl/docker-desktop/cli-tools
+C:\Program Files\Docker\Docker\resources  461G  237G  224G  52% /Docker/host
+eijitoriki@DESKTOP-A92C29I:~$ uptime
+ 23:03:46 up  2:48,  0 users,  load average: 0.04, 0.03, 0.00
+eijitoriki@DESKTOP-A92C29I:~$ top
+top - 23:04:33 up  2:49,  0 users,  load average: 0.02, 0.02, 0.00
+Tasks:  10 total,   1 running,   9 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.2 us,  0.3 sy,  0.0 ni, 99.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   2986.9 total,    364.7 free,   1258.5 used,   1363.7 buff/cache
+MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.   1563.3 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0     916    524    476 S   0.0   0.0   0:00.05 init
+  136 root      20   0     916     84     20 S   0.0   0.0   0:00.00 init
+  137 root      20   0     916     92     20 S   0.0   0.0   0:00.01 init
+  138 root      20   0  731800  26796  14676 S   0.0   0.9   0:00.56 docker-desktop-
+  154 root      20   0     916     92     20 S   0.0   0.0   0:00.00 init
+  155 eijitor+  20   0  769356  43752  27220 S   0.0   1.4   0:01.50 docker
+  238 root      20   0    1272    360     20 S   0.0   0.0   0:00.00 init
+  239 root      20   0    1272    368     20 S   0.0   0.0   0:00.00 init
+  240 eijitor+  20   0   10056   5116   3376 S   0.0   0.2   0:00.05 bash
+  256 eijitor+  20   0   10876   3612   3096 R   0.0   0.1   0:00.00 top
+
+
+eijitoriki@DESKTOP-A92C29I:~$ ping -c 3 172.21.224.1
+PING 172.21.224.1 (172.21.224.1) 56(84) bytes of data.
+64 bytes from 172.21.224.1: icmp_seq=1 ttl=128 time=0.455 ms
+64 bytes from 172.21.224.1: icmp_seq=2 ttl=128 time=0.642 ms
+64 bytes from 172.21.224.1: icmp_seq=3 ttl=128 time=0.342 ms
+
+--- 172.21.224.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2061ms
+rtt min/avg/max/mdev = 0.342/0.479/0.642/0.123 ms
